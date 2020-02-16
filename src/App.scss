@@ -1,0 +1,25 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  nav {
+    background-color: #3b4788;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        border-right: 1px solid #ccc;
+        flex-basis: 20%;
+        line-height: 36px;
+        text-align: center;
+        a {
+          color: #ddd;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

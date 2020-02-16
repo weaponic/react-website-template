@@ -2,7 +2,7 @@ import React from 'react';
 
 class XXX extends React.Component {
   render() {
-    return <div>This is Page Waterfall.Written by <author>熊倩华</author></div>
+    return <div>This is Page Waterfall.Should be written by <span>熊倩华</span></div>
   }
 }
 
