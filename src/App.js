@@ -1,35 +1,50 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./App.scss";
 import SearchPage from "./Search";
 import DetailPage from "./Detail";
 import WaterfallPage from "./Waterfall";
 import ResultPage from "./Result";
 import TreeResultPage from "./ResultWithTree";
+import { Menu } from "antd";
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      current: "search"
+    };
+  }
+
+  handleClick(e) {
+    this.setState({
+      current: e.key
+    });
+  }
+
+  render() {
+    return (
       <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/search">搜索页面（崔）</Link>
-            </li>
-            <li>
-              <Link to="/detail">详情页面（崔）</Link>
-            </li>
-            <li>
-              <Link to="/result">头+二级菜单（曹）</Link>
-            </li>
-            <li>
-              <Link to="/treeResult">头+树+筛选（何）</Link>
-            </li>
-            <li>
-              <Link to="/waterfall">头+导航+瀑布流（熊）</Link>
-            </li>
-          </ul>
-        </nav>
+        <Menu
+          onClick={this.handleClick.bind(this)}
+          selectedKeys={[this.state.current]}
+          mode="horizontal"
+        >
+          <Menu.Item key="search">
+            <Link to="/search">搜索页面（崔）</Link>
+          </Menu.Item>
+          <Menu.Item key="detail">
+            <Link to="/detail">详情页面（崔）</Link>
+          </Menu.Item>
+          <Menu.Item key="result">
+            <Link to="/result">头+二级菜单（曹）</Link>
+          </Menu.Item>
+          <Menu.Item key="treeResult">
+            <Link to="/treeResult">头+树+筛选（何）</Link>
+          </Menu.Item>
+          <Menu.Item key="waterfall">
+            <Link to="/waterfall">头+导航+瀑布流（熊）</Link>
+          </Menu.Item>
+        </Menu>
         <Switch>
           <Route path="/search">
             <SearchPage />
@@ -48,8 +63,8 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
