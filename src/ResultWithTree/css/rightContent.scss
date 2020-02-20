@@ -1,0 +1,130 @@
+.col-right {
+    margin-left: 210px;
+    overflow-y: auto;
+    background: #fff !important;
+    .card {
+        .card-title {
+            height: 40px;
+            line-height: 40px;
+            border: 0;
+            border-bottom: 1px solid #e8e8e8; 
+            .title {
+                margin-left: 15px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .col-right-search {
+                float: right;
+                margin-right: 15px;
+                .col-right-title-search {
+                    margin-right: 10px;
+                    width: 180px;
+                    line-height: 40px;
+                }
+                .col-right-title-add {
+                    height: 24px;
+                }
+            }
+            
+        }
+        .card-content {
+            padding: 15px;
+            border: 0;
+            border-bottom: 1px solid #e8e8e8; 
+            .ant-card-body {
+                padding: 0 !important;
+                .item-col-card-title {
+                    display: inline-block;
+                    width: 69px;
+                    height: 80px;
+                    background: url('../images/pujin.png') no-repeat;
+                }
+                .item-card-title {
+                    span {
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                    .item-col-title {
+                        font-weight: bold;
+                        margin-left: 0 !important;
+                    }
+                    .item-col-content {
+                        margin-left: 10px;
+                        padding: 0 10px;
+                        height: 11px;
+                        line-height: 12px;
+                        border-left: 1px solid #e8e8e8;
+                        color: #2985f7;
+                        .item-col-span {
+                            color: #000 !important;
+                        }
+                    }
+                }
+                .col-card-content {
+                    font-size: 12px;
+                    color:　#ccc;
+                    .item-col {
+                        display: inline-block;
+                        margin-left: 50px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .item-col-common {
+                        width: 110px;
+                    }
+                    .item-col-special {
+                        display: inline-flex;
+                        width: 150px;
+                        .col-special-content {
+                            display: inline-block;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 70px;
+                        }
+                        .see-icon {
+                            display: inline-block;
+                            width: 70px;
+                            color: #2985f7;
+                            cursor: pointer;
+                        }
+                    }
+                    span:first-child {
+                        margin-left: 0 !important;
+                    }
+                    .col1-edit {
+                        float: right;
+                        font-size: 12px;
+                        color: #2985f7;
+                        span {
+                            cursor: pointer;
+                        }
+                        .del {
+                            display: inline-block;
+                            padding: 0 10px;
+                            margin: 0 10px;
+                            height: 11px;
+                            line-height: 12px;
+                            border-left: 1px solid #ccc;
+                            border-right: 1px solid #ccc;
+                            color: red;
+                        }
+                        
+                    }
+                }
+
+                .col1-card-content {
+                    margin-top: 15px;
+                }
+
+                .col2-card-content {
+                    display: flex;
+                }
+            }
+            
+            
+        }
+}
+
+}

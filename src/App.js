@@ -4,7 +4,7 @@ import SearchPage from "./Search";
 import DetailPage from "./Detail";
 import WaterfallPage from "./Waterfall";
 import ResultPage from "./Result";
-import TreeResultPage from "./ResultWithTree";
+import TreeResultPage from "./ResultWithTree/ResultWithTree";
 import { Menu } from "antd";
 
 class App extends React.Component {
@@ -28,6 +28,7 @@ class App extends React.Component {
           onClick={this.handleClick.bind(this)}
           selectedKeys={[this.state.current]}
           mode="horizontal"
+          className="menuItems"
         >
           <Menu.Item key="search">
             <Link to="/search">搜索页面（崔）</Link>
