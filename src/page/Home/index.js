@@ -8,7 +8,7 @@ import imgCoverResult from "../../assets/images/result.png";
 import imgCoverRTree from "../../assets/images/resultWithTree.png";
 
 const { Meta } = Card;
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 function CardItem(props) {
   const handleCardClicked = () => {
@@ -40,8 +40,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <Header>
+      <Layout className="wrapper">
+        <Header className="wrapper-header">
           <div className="logo">React常用网页模板</div>
           <ul className="nav-list">
             <li onClick={this.handleNavItemClicked}>
@@ -58,7 +58,7 @@ class App extends React.Component {
             </li>
           </ul>
         </Header>
-        <Content>
+        <Content className="wrapper-body">
           <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 32]}>
             <Col className="gutter-row" span={6}>
               <CardItem title="搜索页面" img={imgCoverSearch} href="/search" />
